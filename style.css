@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "digital-7";
+    src: url("/fonts/digital-7\ \(mono\).ttf");
 }
 
 body{
@@ -15,6 +19,8 @@ body{
     flex-direction: column;
     font-family: sans-serif;
 }
+
+/*  Header  */
 
 header{
     display: flex;
@@ -31,6 +37,40 @@ h1{
     letter-spacing: 5px;
     font-size: 3em;
 }
+
+/*  Scoreboard  */
+
+.div-scoreboard{
+    width: 50%;
+    min-width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.scoreboard{
+    text-transform: uppercase;
+    padding: 1%;
+    height: 3em;
+    width: 9em;
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.scoreboard p:nth-child(2){
+    margin: 3px;
+    font-family: "digital-7", sans-serif;
+    color: green;
+    background-color: rgba(0,0,0,.2);
+    padding: 1px 5px;
+    user-select: none;
+}
+
+/*  Card   */
 
 #board{
     display: flex;
@@ -95,6 +135,8 @@ section{
     border-radius: 10px;
 }
 
+/*  Type  */
+
 .bug{
     background: linear-gradient(180deg, #CFFFB8 17.03%, #B7FF42 67.6%, #18A800 100%);
 }
@@ -119,6 +161,19 @@ section{
 .electric{
     background: linear-gradient(180deg, #F7FD04 17.03%, #ffc62a 67.6%, #F98404 100%);
 }
+.flying{
+    background: linear-gradient(180deg, #9bd7ff 17.6%, #7bf0ff 67.03%, #31b8b8 100%);
+}
+.ice{
+    background: linear-gradient(180deg, #eff8ff 17.6%, #a0dde5 67.03%, #3184b8 100%);
+}
+.psyc{
+    background: linear-gradient(180deg, #ff9be9 17.6%, #df49f9 67.03%, #b8314e 100%);
+}
+.ghost{
+    background: linear-gradient(180deg, #260045 17.6%, #34064b 75.03%, #4a15ad 100%);
+}
+
 .legend{
     background: linear-gradient(45deg,#fca204, #fffbf4);
     background-clip: text;
@@ -126,12 +181,6 @@ section{
     color: transparent !important;
 
     animation: move 4s linear infinite;
-}
-
-@keyframes move {
-    to{
-        background-position-x: 600px;
-    }
 }
 
 ul{
@@ -169,6 +218,15 @@ input{
 
 li:hover{
     background: rgba(0,0,0,.2);
+}
+
+/*  Bottom   */
+
+legend{
+    position: absolute;
+    margin-left: 35px;
+    color: #FFF;
+    font-size: .8em;
 }
 
 button{
@@ -210,6 +268,13 @@ h2{
     display: none;
 }
 
+small{
+    display: none;
+    margin-bottom: 15px;
+}
+
+/*  Footer  */
+
 #footer{
     width: 100%;
     height: 10vh;
@@ -234,4 +299,18 @@ h2{
 a{
     text-decoration: none;
     color: #FFF
+}
+
+/*  Animations  */
+
+@keyframes piscar {
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes move {
+    to{
+        background-position-x: 600px;
+    }
 }

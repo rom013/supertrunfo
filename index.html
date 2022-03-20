@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +10,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/digital-7 (mono).ttf">
 </head>
 <body>
     <header class="heafer-page">
         <h1>SUPERTRUNFO</h1>
         <img src="https://cdn.discordapp.com/attachments/691421631700271114/953489850877759548/image_1_1.png" alt="">
     </header>
+
+    <div class="div-scoreboard">
+        <div id="scoreboardPlayer" class="scoreboard">
+            <p>Player</p>
+            <p id="ptsPlayer">0</p>
+        </div>
+        <div id="scoreboardBot" class="scoreboard">
+            <p id="trainer"></p>
+            <p id="ptsBot">0</p>
+        </div>
+    </div>
+
     <section id="board"></section>
 
 
     <button onclick="play()" id="btn-play">JOGAR</button>
-    <p class="msg"></p>
 
+    <div class="msg">
+        <small></small>
+        <p class="msgText"></p>
+        <span class="time"></span>
+    </div>
+    
     <section>
         <h2>CARTAS USADAS <span id="useTotal">()</span></h2>
 
